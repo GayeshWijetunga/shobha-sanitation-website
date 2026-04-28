@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact & Booking - SHOBHA SANITATION (PVT) LTD</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <div class="container navbar">
+            <a href="index.html" class="logo-container">
+                <img src="icon.png" alt="SHOBHA SANITATION Icon" class="header-icon" onerror="this.style.display='none';">
+                <div class="brand-text">
+                    SHOBHA SANITATION <span class="pvt-ltd">(PVT) LTD</span>
+                </div>
+            </a>
+            <nav class="nav-links">
+                <a href="index.html">Home</a>
+                <a href="services.html">Services</a>
+                <a href="about.html">About Us</a>
+                <a href="contact.html" class="active">Contact</a>
+                <a href="contact.html" class="btn btn-primary">Book Now</a>
+            </nav>
+            <div class="mobile-menu-btn">
+                <i class="fas fa-bars"></i>
+            </div>
+        </div>
+    </header>
+
+    <main>
+        <!-- Page Header -->
+        <section class="section bg-gray" style="padding: 60px 0; text-align: center;">
+            <div class="container fade-in">
+                <h1>Contact & Booking</h1>
+                <p style="max-width: 600px; margin: 0 auto;">Get in touch with us to request a free quote or book your next cleaning appointment.</p>
+            </div>
+        </section>
+
+        <!-- Contact Section -->
+        <section class="section fade-in">
+            <div class="container contact-grid">
+                <!-- Info Column -->
+                <div>
+                    <div class="contact-info-card" style="margin-bottom: 30px;">
+                        <h3 style="margin-bottom: 25px;">Get In Touch</h3>
+                        
+                        <div class="contact-item">
+                            <i class="fas fa-phone-alt"></i>
+                            <div>
+                                <strong style="display: block; font-size: 0.9rem; opacity: 0.8;">Primary Phone</strong>
+                                <a href="tel:0707185555" style="color: white; text-decoration: none; font-weight: 600;">070 718 5555</a>
+                            </div>
+                        </div>
+                        
+                        <div class="contact-item">
+                            <i class="fas fa-phone-alt"></i>
+                            <div>
+                                <strong style="display: block; font-size: 0.9rem; opacity: 0.8;">Secondary Phone</strong>
+                                <a href="tel:0716737373" style="color: white; text-decoration: none; font-weight: 600;">071 673 7373</a>
+                            </div>
+                        </div>
+                        
+                        <div class="contact-item">
+                            <i class="fas fa-envelope"></i>
+                            <div>
+                                <strong style="display: block; font-size: 0.9rem; opacity: 0.8;">Email Address</strong>
+                                <a href="mailto:shobhasanitation@gmail.com" style="color: white; text-decoration: none; font-weight: 600;">shobhasanitation@gmail.com</a>
+                            </div>
+                        </div>
+
+                        <div class="contact-item">
+                            <i class="fas fa-map-marker-alt"></i>
+                            <div>
+                                <strong style="display: block; font-size: 0.9rem; opacity: 0.8;">Address</strong>
+                                <span style="color: white; font-weight: 600;">No.53/06, Stark Place, Suriyamal Mawatha, Divulpitiya, Boralasgamuwa</span>
+                            </div>
+                        </div>
+                        
+                        <div class="contact-item" style="margin-top: 30px;">
+                            <a href="https://wa.me/94707185555?text=Hi,%20I%E2%80%99m%20interested%20in%20your%20cleaning%20services." target="_blank" class="btn" style="background-color: white; color: var(--primary-color); width: 100%;"><i class="fab fa-whatsapp"></i> Chat on WhatsApp</a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Booking Form Column -->
+                <div>
+                    <div class="contact-form">
+                        <h3 style="margin-bottom: 20px; color: var(--text-dark);">Request a Free Quote</h3>
+                        <form>
+                            <div class="form-group">
+                                <label for="name">Full Name</label>
+                                <input type="text" id="name" class="form-control" required placeholder="John Doe">
+                            </div>
+                            
+                            <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 15px;">
+                                <div class="form-group">
+                                    <label for="phone">Phone Number</label>
+                                    <input type="tel" id="phone" class="form-control" required placeholder="07x xxx xxxx">
+                                </div>
+                                <div class="form-group">
+                                    <label for="email">Email Address</label>
+                                    <input type="email" id="email" class="form-control" required placeholder="john@example.com">
+                                </div>
+                            </div>
+                            
+                            <div class="form-group">
+                                <label for="service">Select Service</label>
+                                <select id="service" class="form-control" required>
+                                    <option value="" disabled selected>-- Choose a Service --</option>
+                                    <option value="residential">Residential Cleaning</option>
+                                    <option value="commercial">Commercial Cleaning</option>
+                                    <option value="industrial">Industrial Cleaning</option>
+                                    <option value="deep">Deep Cleaning</option>
+                                    <option value="other">Other</option>
+                                </select>
+                            </div>
+                            
+                            <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 15px;">
+                                <div class="form-group">
+                                    <label for="date">Preferred Date</label>
+                                    <input type="date" id="date" class="form-control" required>
+                                </div>
+                                <div class="form-group">
+                                    <label for="time">Preferred Time</label>
+                                    <select id="time" class="form-control">
+                                        <option value="morning">Morning (8AM - 12PM)</option>
+                                        <option value="afternoon">Afternoon (12PM - 4PM)</option>
+                                        <option value="evening">Evening (4PM - 7PM)</option>
+                                    </select>
+                                </div>
+                            </div>
+
+                            <div class="form-group">
+                                <label for="message">Additional Details</label>
+                                <textarea id="message" class="form-control" placeholder="Tell us about the size of the space, specific cleaning needs, etc."></textarea>
+                            </div>
+                            
+                            <button type="submit" class="btn btn-primary" style="width: 100%; font-size: 1.1rem; margin-top: 10px;">Get a Free Quote</button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-col">
+                    <img src="logo.png" alt="SHOBHA SANITATION Logo" style="height: 40px; margin-bottom: 20px; filter: brightness(0) invert(1);" onerror="this.style.display='none';">
+                    <h4>SHOBHA SANITATION (PVT) LTD</h4>
+                    <p>Dedicated to providing high-quality, reliable, and affordable cleaning solutions for all spaces.</p>
+                </div>
+                <div class="footer-col">
+                    <h4>Quick Links</h4>
+                    <ul class="footer-links">
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="services.html">Services</a></li>
+                        <li><a href="about.html">About Us</a></li>
+                        <li><a href="contact.html">Contact</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4>Contact Information</h4>
+                    <ul class="footer-links" style="color: #a4b0be;">
+                        <li><i class="fas fa-phone-alt"></i> <a href="tel:0707185555">070 718 5555</a></li>
+                        <li><i class="fas fa-phone-alt"></i> <a href="tel:0716737373">071 673 7373</a></li>
+                        <li><i class="fas fa-envelope"></i> <a href="mailto:shobhasanitation@gmail.com">shobhasanitation@gmail.com</a></li>
+                        <li style="line-height: 1.4;"><i class="fas fa-map-marker-alt" style="width: 16px;"></i> No.53/06, Stark Place, Suriyamal Mawatha, Divulpitiya, Boralasgamuwa</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2026 SHOBHA SANITATION (PVT) LTD. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <a href="https://wa.me/94707185555?text=Hi,%20I%E2%80%99m%20interested%20in%20your%20cleaning%20services." class="whatsapp-float" target="_blank" rel="noopener noreferrer">
+        <i class="fab fa-whatsapp"></i>
+    </a>
+    <script src="script.js"></script>
+</body>
+</html>

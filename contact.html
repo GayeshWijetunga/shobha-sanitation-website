@@ -4,6 +4,17 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Contact & Booking - SHOBHA SANITATION (PVT) LTD</title>
+    <link rel="icon" type="image/png" href="assets/favicon.png">
+    <link rel="shortcut icon" href="assets/favicon.png">
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "Organization",
+      "name": "SHOBHA SANITATION (PVT) LTD",
+      "url": "https://shobhasanitation.com",
+      "logo": "https://shobhasanitation.com/assets/favicon.png"
+    }
+    </script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="styles.css">
@@ -12,7 +23,7 @@
     <header>
         <div class="container navbar">
             <a href="index.html" class="logo-container">
-                <img src="icon.png" alt="SHOBHA SANITATION Icon" class="header-icon" onerror="this.style.display='none';">
+                <img src="assets/logo-transparent.png" alt="Shobha Sanitation Logo" class="header-icon">
                 <div class="brand-text">
                     SHOBHA SANITATION <span class="pvt-ltd">(PVT) LTD</span>
                 </div>
@@ -182,6 +193,23 @@
     <a href="https://wa.me/94707185555?text=Hi,%20I%E2%80%99m%20interested%20in%20your%20cleaning%20services." class="whatsapp-float" target="_blank" rel="noopener noreferrer">
         <i class="fab fa-whatsapp"></i>
     </a>
+    <!-- Quote Modal -->
+    <div id="quoteModalOverlay" class="quote-modal-overlay">
+        <div class="quote-modal">
+            <button id="quoteModalClose" class="quote-modal-close" aria-label="Close">&times;</button>
+            <h3 id="modalTitle">Get a Free Quote</h3>
+            <p id="modalSubtitle">Choose how you'd like to reach us:</p>
+            <div class="quote-modal-options">
+                <a id="modalWhatsApp" href="#" target="_blank" rel="noopener noreferrer" class="quote-modal-btn whatsapp">
+                    <i class="fab fa-whatsapp"></i> WhatsApp
+                </a>
+                <a id="modalEmail" href="#" class="quote-modal-btn email">
+                    <i class="fas fa-envelope"></i> Email
+                </a>
+            </div>
+        </div>
+    </div>
+
     <script src="script.js"></script>
 </body>
 </html>

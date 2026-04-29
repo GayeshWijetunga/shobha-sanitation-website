@@ -1,9 +1,10 @@
 :root {
   /* Colors based on SHOBHA Sanitation logo */
-  --primary-color: #60D34D; /* Lime Green */
-  --primary-dark: #4ba63c;
-  --secondary-color: #5B73C8; /* Blue */
-  --accent-color: #F5A623; /* Orange/Yellow */
+  --primary-color: #0496C7; /* Logo Blue */
+  --primary-dark: #0378a0; /* Darker Blue */
+  --secondary-color: #0496C7; /* Blue (kept for compatibility) */
+  --accent-color: #F5A623;  /* Orange/Yellow */
+  --accent-green: #60D34D;  /* Logo Lime Green – small details */
   
   --bg-light: #ffffff;
   --bg-gray: #f8f9fa;
@@ -132,7 +133,7 @@ header {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 20px 0;
+  padding: 12px 0;
 }
 
 .logo-container {
@@ -144,7 +145,7 @@ header {
 }
 
 .header-icon {
-  height: 70px;
+  height: 85px;
   width: auto;
   object-fit: contain;
 }
@@ -216,7 +217,7 @@ header {
 
 /* Hero Section */
 .hero {
-  background: linear-gradient(135deg, rgba(96, 211, 77, 0.05) 0%, rgba(91, 115, 200, 0.1) 100%);
+  background: linear-gradient(135deg, rgba(4, 150, 199, 0.07) 0%, rgba(3, 120, 160, 0.12) 100%);
   padding: 80px 0;
   min-height: calc(100vh - 80px);
   display: flex;
@@ -236,7 +237,7 @@ header {
 }
 
 .hero-text h1 span {
-  color: var(--primary-color);
+  color: var(--accent-green);
 }
 
 .hero-text p {
@@ -293,7 +294,7 @@ header {
   transform: translateX(-50%);
   width: 60px;
   height: 4px;
-  background-color: var(--primary-color);
+  background-color: var(--accent-green);
   border-radius: 2px;
 }
 
@@ -317,7 +318,7 @@ header {
 .service-card:hover {
   transform: translateY(-5px);
   box-shadow: var(--shadow-lg);
-  border-bottom-color: var(--primary-color);
+  border-bottom-color: var(--accent-green);
 }
 
 .service-icon {
@@ -340,9 +341,9 @@ header {
 }
 
 .feature-item i {
-  color: var(--accent-color);
+  color: var(--accent-green);
   font-size: 1.5rem;
-  background-color: rgba(245, 166, 35, 0.1);
+  background-color: rgba(96, 211, 77, 0.12);
   padding: 15px;
   border-radius: 50%;
 }
@@ -412,7 +413,7 @@ header {
 .form-control:focus {
   outline: none;
   border-color: var(--primary-color);
-  box-shadow: 0 0 0 3px rgba(96, 211, 77, 0.1);
+  box-shadow: 0 0 0 3px rgba(4, 150, 199, 0.18);
 }
 
 textarea.form-control {
@@ -450,7 +451,7 @@ footer {
 }
 
 .footer-links a:hover {
-  color: var(--primary-color);
+  color: var(--accent-green);
   padding-left: 5px;
 }
 
@@ -501,30 +502,24 @@ footer {
   transform: translateY(0);
 }
 
-/* Responsive */
+/* ── Responsive – Tablet & Mobile (≤ 768px) ───────────────── */
 @media (max-width: 768px) {
+
+  /* Header */
   .header-icon {
-    height: 50px;
+    height: 45px;
   }
 
   .brand-text {
-    font-size: 1.1rem;
+    font-size: 1.05rem;
   }
 
   .pvt-ltd {
-    font-size: 0.7rem;
+    font-size: 0.68rem;
     margin-left: 5px;
   }
 
-  .hero-content {
-    grid-template-columns: 1fr;
-    text-align: center;
-  }
-  
-  .hero-btns {
-    justify-content: center;
-  }
-  
+  /* Mobile nav */
   .nav-links {
     display: none;
     position: absolute;
@@ -533,22 +528,298 @@ footer {
     width: 100%;
     background-color: var(--primary-dark);
     flex-direction: column;
-    padding: 20px 0;
+    padding: 16px 0;
     box-shadow: var(--shadow);
-    gap: 20px;
+    gap: 4px;
+    z-index: 999;
   }
-  
+
+  .nav-links a {
+    padding: 10px 24px;
+    width: 100%;
+    text-align: left;
+  }
+
+  .nav-links .btn-primary {
+    margin: 8px 24px 4px;
+    width: calc(100% - 48px);
+    text-align: center;
+  }
+
   .nav-links.active {
     display: flex;
   }
-  
+
   .mobile-menu-btn {
     display: block;
   }
 
-  .contact-grid {
+  /* Typography */
+  h1 { font-size: 2.2rem; }
+  h2 { font-size: 1.75rem; }
+  h3 { font-size: 1.25rem; }
+
+  /* Sections – reduce padding on mobile */
+  .section {
+    padding: 50px 0;
+  }
+
+  /* Hero */
+  .hero {
+    padding: 50px 0;
+    min-height: auto;
+  }
+
+  .hero-content {
+    grid-template-columns: 1fr;
+    text-align: center;
+    gap: 30px;
+  }
+
+  .hero-text h1 {
+    font-size: 2rem;
+  }
+
+  .hero-text p {
+    font-size: 1rem;
+  }
+
+  .hero-btns {
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 12px;
+  }
+
+  /* Hide hero side image on mobile */
+  .hero-image {
+    display: none;
+  }
+
+  /* Grids – single column on small screens */
+  .services-grid {
     grid-template-columns: 1fr;
   }
-  
-  h1 { font-size: 2.5rem; }
+
+  .features-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .footer-grid {
+    grid-template-columns: 1fr;
+    gap: 28px;
+  }
+
+  /* Contact */
+  .contact-grid {
+    grid-template-columns: 1fr;
+    gap: 24px;
+  }
+
+  .contact-info-card {
+    padding: 24px 20px;
+  }
+
+  .contact-form {
+    padding: 24px 20px;
+  }
+
+  /* Flatten inline 2-col form grids */
+  .contact-form div[style*="grid-template-columns: 1fr 1fr"] {
+    display: block !important;
+  }
+
+  .contact-form div[style*="grid-template-columns: 1fr 1fr"] .form-group {
+    margin-bottom: 20px;
+  }
+
+  /* WhatsApp button */
+  .whatsapp-float {
+    width: 52px;
+    height: 52px;
+    bottom: 20px;
+    right: 16px;
+    font-size: 26px;
+  }
+
+  /* About stats section */
+  .section div[style*="justify-content: space-around"] {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .section-title {
+    margin-bottom: 32px;
+  }
+}
+
+/* ── Responsive – Small Phones (≤ 480px) ──────────────────── */
+@media (max-width: 480px) {
+
+  .container {
+    padding: 0 16px;
+  }
+
+  h1 { font-size: 1.8rem; }
+  h2 { font-size: 1.5rem; }
+  h3 { font-size: 1.15rem; }
+
+  .section {
+    padding: 40px 0;
+  }
+
+  .hero {
+    padding: 36px 0;
+  }
+
+  .hero-text h1 {
+    font-size: 1.7rem;
+  }
+
+  .hero-btns {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .hero-btns .btn {
+    width: 100%;
+    max-width: 280px;
+    text-align: center;
+  }
+
+  .header-icon {
+    height: 38px;
+  }
+
+  .brand-text {
+    font-size: 0.95rem;
+  }
+
+  .service-card {
+    padding: 22px 18px;
+  }
+
+  .service-icon {
+    font-size: 2.2rem;
+  }
+
+  .contact-info-card,
+  .contact-form {
+    padding: 20px 16px;
+  }
+
+  .quote-modal {
+    padding: 28px 20px 22px;
+  }
+
+  .whatsapp-float {
+    width: 48px;
+    height: 48px;
+    bottom: 16px;
+    right: 12px;
+    font-size: 22px;
+  }
+}
+
+/* ── Quote Modal ─────────────────────────────────── */
+.quote-modal-overlay {
+  display: none;
+  position: fixed;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.5);
+  z-index: 2000;
+  align-items: center;
+  justify-content: center;
+}
+
+.quote-modal-overlay.active {
+  display: flex;
+}
+
+.quote-modal {
+  background: var(--white);
+  border-radius: 16px;
+  padding: 36px 32px 28px;
+  max-width: 380px;
+  width: 90%;
+  box-shadow: 0 20px 50px rgba(0,0,0,0.25);
+  position: relative;
+  text-align: center;
+  animation: modalPop 0.25s ease;
+}
+
+@keyframes modalPop {
+  from { transform: scale(0.9); opacity: 0; }
+  to   { transform: scale(1);   opacity: 1; }
+}
+
+.quote-modal h3 {
+  font-size: 1.25rem;
+  margin-bottom: 8px;
+  color: var(--text-dark);
+}
+
+.quote-modal p {
+  font-size: 0.95rem;
+  color: var(--text-muted);
+  margin-bottom: 24px;
+}
+
+.quote-modal-close {
+  position: absolute;
+  top: 14px;
+  right: 18px;
+  font-size: 1.4rem;
+  cursor: pointer;
+  color: var(--text-muted);
+  background: none;
+  border: none;
+  line-height: 1;
+}
+
+.quote-modal-close:hover {
+  color: var(--text-dark);
+}
+
+.quote-modal-options {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.quote-modal-btn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  padding: 14px 20px;
+  border-radius: 50px;
+  font-size: 1rem;
+  font-weight: 600;
+  font-family: var(--font-main);
+  cursor: pointer;
+  border: none;
+  text-decoration: none;
+  transition: var(--transition);
+}
+
+.quote-modal-btn.whatsapp {
+  background-color: #25d366;
+  color: #fff;
+}
+
+.quote-modal-btn.whatsapp:hover {
+  background-color: #1ebe5d;
+  transform: translateY(-2px);
+  box-shadow: var(--shadow);
+}
+
+.quote-modal-btn.email {
+  background-color: var(--primary-color);
+  color: #fff;
+}
+
+.quote-modal-btn.email:hover {
+  background-color: var(--primary-dark);
+  transform: translateY(-2px);
+  box-shadow: var(--shadow);
 }
